@@ -1,9 +1,15 @@
+@use "src/app/(pages)/_globals/mixins.scss";
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 250px 0;
   background: (var(--include-gradient));
+
+  @include mixins.phone {
+    padding: 250px 16px;
+  }
 }
 
 .header {
@@ -11,6 +17,17 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 32px;
+
+  @include mixins.phone {
+    align-items: flex-start;
+  }
+}
+
+.image {
+  @include mixins.phone {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .title {
@@ -26,6 +43,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 32px;
+
+  @include mixins.sm-desktop {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .more {

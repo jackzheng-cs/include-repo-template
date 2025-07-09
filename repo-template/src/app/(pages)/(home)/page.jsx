@@ -45,7 +45,13 @@ export default function assignment1() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <Image src="/home/pen.png" width="80" height="80" alt="Pen Image" />
+        <Image
+          src="/home/pen.png"
+          width="80"
+          height="80"
+          alt="Pen Image"
+          className={styles.image}
+        />
 
         <div className={styles.title}>
           <h1>Recent Work</h1>

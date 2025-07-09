@@ -1,12 +1,19 @@
+@use "src/app/(pages)/_globals/mixins.scss";
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  width: 583px;
-  height: 673px;
+  max-width: 583px;
+  max-height: 673px;
   border-radius: 20px;
   background-color: #4f3c83;
+
+  @include mixins.phone {
+    width: 358px;
+    height: 532px;
+  }
 }
 
 .term {
@@ -17,6 +24,11 @@
 .image {
   margin-top: 8px;
   border-radius: 8px;
+
+  @include mixins.phone {
+    width: 298px;
+    height: 150px;
+  }
 }
 
 .title {
@@ -42,4 +54,8 @@
   font-family: "Inter", sans-serif;
   font-size: 1.5rem;
   color: var(--white);
+
+  @include mixins.tablet {
+    font-size: 1.125rem;
+  }
 }
