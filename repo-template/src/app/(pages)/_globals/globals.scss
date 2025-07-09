@@ -1,0 +1,56 @@
+@use "./mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+  // primary colors
+  --white: #fafafa;
+  --gray: #d0d0d0;
+  --include-gradient: linear-gradient(to right, #332950, #3c257e, #322d41);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+// Heading
+h1 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  color: var(--white);
+
+  @include mixins.phone {
+    font-size: 1.5rem;
+  }
+}
+
+// Heading 2
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--gray);
+
+  @include mixins.phone {
+    font-size: 1rem;
+  }
+}
+
+// Heading 3
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+// Body
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gray);
+
+  @include mixins.phone {
+    font-size: 0.75rem;
+  }
+}
